@@ -1,0 +1,61 @@
+% This needs to come FIRST in the document.
+\DocumentMetadata{
+  lang        = en,
+	pdfversion  = 1.7,
+  pdfstandard = ua-1,
+%  pdfstandard = ua-2,
+  tagging=on,
+	tagging-setup={math/mathml/luamml/load=false}
+%  tagging-setup={math/setup=mathml-SE}
+}
+\tagpdfsetup{table/header-rows={1}}
+
+\documentclass[10pt]{article}
+
+\usepackage[margin=1in]{geometry} % At least Geometry is legal with tagging!
+
+\usepackage{lipsum} % for dummy text
+
+\usepackage{tikz} % for graphics; the same commands work with \includegraphics
+
+\title{PDF 1.7 Accessibility Demo}
+\author{Masaros}
+
+\begin{document}
+\maketitle
+This document provides an example of an accessible PDF using the PDF/UA-1 standard.
+\section{First section}
+\lipsum[1]
+\section{A section with some math}
+See how this version handles math formulas, like this displayed equation.
+% Displayed math
+\[
+y=mx+b
+\]
+We can also write a paragraph with inline math, such as $y=mx+b$ or $x=\frac{2}{3}$.
+\section{A section with some pictures and tables}
+Let's draw an image with alt text.
+\begin{center}
+\begin{tikzpicture}[x=0.25in,y=0.25in,alt={A circle}]
+\draw (0,0) circle (1);
+\end{tikzpicture}
+\end{center}
+This next image is just here to look pretty, so I'm going to tell screen readers to ignore it.
+\begin{center}
+\begin{tikzpicture}[x=0.25in,y=0.25in,artifact] %"artifact" is a decorative image
+\draw (-1,-1) rectangle (1,1);
+\end{tikzpicture}
+\end{center}
+And finally, inline, I'm going to make an image that's just some text with a box around it.
+\begin{tikzpicture}[baseline=0,actualtext=Text]
+\draw (0,0) node[anchor=base,draw]{Text};
+\end{tikzpicture}
+The screen reader will ignore the box and just read the word.
+\begin{center}
+\begin{tabular}{lll}
+Column 1&Column 2&Column 3\\\hline
+Row 1&Row 1&Row 1\\
+Row 2&Row 2&Row 2
+\end{tabular}
+\end{center}
+\end{document}
