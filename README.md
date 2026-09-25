@@ -1,5 +1,11 @@
 # Links
+## Scanned Notes Accessibility
 - [Video - Making scanned lecture notes accessible in Acrobat in about 5 minutes](https://youtu.be/_nFjAvMKFzQ)
+## LaTeX Accessibility
 - [LaTeX Tagging Project](https://latex3.github.io/tagging-project/documentation/usage-instructions)
 - [VeraPDF - PDF accessibility checker](https://dev.verapdf-rest.duallab.com/)
 - [PreTeXt](https://pretextbook.org/)
+## Learn HTML Resources
+- [Khan Academy HTML Course](https://www.khanacademy.org/computing/computer-programming/html-css)
+- [HTML for People](https://htmlforpeople.com/)
+- [W3schools HTML Tutorial](https://www.w3schools.com/html/)
